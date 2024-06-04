@@ -1,4 +1,4 @@
-const int PIN_OPERATOR_CONTROL = 14; // D5
+const int PIN_OPERATOR_CONTROL = 15; 
 const int PIN_SENSOR_OPENED = 5;     // D1
 const int PIN_SENSOR_CLOSED = 4;     // D2
 
@@ -38,7 +38,6 @@ struct GarageDoor : Service::GarageDoorOpener {
   }
 
   boolean update() {
-    LOG1("Updating\n");
     if (target->getNewVal() == currentDoorStateOpen) {
       LOG1("Opening Garage Door\n");
       current->setVal(currentDoorStateOpening);
